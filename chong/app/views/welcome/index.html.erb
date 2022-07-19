@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>super body</title>
+<style>
+    #map-canvas{
+    width:100%;
+    height:400px;
+    }
+    input{
+        border-radius: 5px;
+        outline: none;
+        border:1px solid gainsboro;
+    }
+    input:focus{
+        border:1px solid gold;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="/home/qingweic/sfuhome/cmpt276/project/fitness/css/fitness-center/fitness-center/chong/app/views/css/styles.css">
+
+</head>
+<body>
+
+
+<header>
+<h1>let us work out now!</h1>
+<b>DO YOU <sup><i>EXERCISE</i> </sup>TODAY, BRO?</b><br><br>
+<hr />
+    <div class="main">
+        <ul>
+            <li><a class ="active" href="#">HOME</a></li>
+            <li><a href="#">Daily Calories Intake</a></li>
+            <li><a href="#">Daily Calories Consume</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="title">
+        <h1>WE  ALL  LOVE  EXERCISES!</h1>
+        
+&nbsp;<br>
+    </div>
+
+<br>
+<img src="/home/qingweic/sfuhome/cmpt276/project/fitness/css/fitness-center/fitness-center/chong/app/assets/images/4.jpg" width="240px"height="140px" align="left"><br>
+
+
+<h1>Exercises is awesome!</h1>
+<h2>Exercises is awesome!</h2>
+<h3>Exercises is awesome!</h3>
+<h4>Exercises is awesome!</h4>
+<h5>Exercises is awesome!</h5>
+
+
+
+<body>
+
+    <h1>let us work out now!</h1>
+    <b>DO YOU <sup><i>EXERCISE</i> </sup>TODAY, BRO?</b><br><br>
+    <hr />
+    <form action="">
+        <h1>Calculating personal daily calorie intake by entering daily food intake here!</h1>
+        apple: <input type="value" name="apple" id="k"></input> g<br>
+        banana: <input type="value" name="banana" id="l"></input> g<br>
+        beef: <input type="value" name="beef" id="b"></input> g<br>
+        broccoli: <input type="value" name="broccoli" id="g"></input> g<br>
+        chicken: <input type="value" name="chicken" id="e"></input> g<br>
+        egg:  <input type="value" name="egg" id="a"></input> g<br>
+        lamb: <input type="value" name="lamb" id="d"></input> g<br>
+        orange: <input type="value" name="orange" id="m"></input> g<br>
+        pork: <input type="value" name="pork" id="c"></input> g<br>
+        potato: <input type="value" name="potato" id="i"></input> g<br>
+        rice: <input type="value" name="rice" id="f"></input> g<br>
+        tomato: <input type="value" name="tomato" id="j"></input> g<br>
+        wheat: <input type="value" name="wheat" id="h"></input> g<br>
+        
+        </form>
+    <button type = "button" onclick="myFunction1()">Daily Calorie Intake </button>
+    <p id="demo1"></p>
+    <script>
+    function myFunction1() 
+    {
+            var a,b,c,d,e,f,g;
+                a=document.getElementById("a").value;
+                b=document.getElementById("b").value;
+                c=document.getElementById("c").value;
+                d=document.getElementById("d").value;
+                e=document.getElementById("e").value;
+                f=document.getElementById("f").value;
+                g=document.getElementById("g").value;
+                h=document.getElementById("h").value;
+                i=document.getElementById("i").value;
+                j=document.getElementById("j").value;
+                k=document.getElementById("k").value;
+                l=document.getElementById("l").value;
+                m=document.getElementById("m").value;
+                document.getElementById("demo1").innerHTML=Number(a)*1.546+Number(b)*2.5+Number(c)*2.42+Number(d)*2.94+Number(e)*2.39+Number(f)*1.3+Number(g)*0.34+Number(h)*3.27+Number(i)*0.77+Number(j)*0.176+Number(k)*0.52+Number(l)*0.89+Number(m)*0.47;
+    }
+    </script>
+ <hr />
+<h1>Calculating personal daily calorie consuming by enter your information!</h1>
+<form>
+   age(years) <input id = "age">
+    weight(pounds) <input id = "weight">
+    height(inches) <input id = "height">
+    <form action="">
+    <h5>Activity Level Factors:</h5>
+    <select id = "test" name="Activity Level Factors">
+    <option value="1">no exercises</option>
+    <option value="1.2"> sedentary (little or no exercise due to injury or illness)</option>
+    <option value="1.375">lightly active (about 30 minutes training, moderate 1 to 3 days/week)</option>
+    <option value="1.55">moderately active (moderate 45 minutes, 3 to 5 days/week)</option>
+    <option value="1.725">very active (1 hour, 6 to 7 days a week)</option>
+    <option value="1.9">extra active (very hard training including weight lifting 2-3 days/week)</option>
+    </select>
+    <button type="button" onclick="myFunction()">calculate</button>
+    <p id="demo"></p>
+    <script>
+    function myFunction() {
+        var x,y,z,a,test;
+        x = document.getElementById("age").value;
+        y = document.getElementById("weight").value;
+        z = document.getElementById("height").value;
+        var  myselect=document.getElementById("test");
+        var index=myselect.selectedIndex ; 
+        test = myselect.options[index].value;
+        document.getElementById("demo").innerHTML = Number(test)*(-6.8*Number(x)+6.23*Number(y)+12.7*Number(z)+66);
+    }
+    </script>
+<script>
+    function displayDate(){
+        document.getElementById("demo").innerHTML=Date();
+    }
+</script>
+
+
+<h1>Date</h1>
+<p id="demo">What time it is?</p>
+
+<button type="button" onclick="displayDate()">show date</button>
+
+
+<p>Personal goal：</p>
+
+<form>
+    <input type="radio" name="goal" value="lose weight">lose weight<br>
+    <input type="radio" name="goal" value="gain weight">gain weight
+</form> 
+
+
+<h1>Our Map </h1>
+<input type="text" id="mapsearch" size="50">
+<div id="map-canvas"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATLSYSXg3j5DKycy_uNZNQgOobtKLSpjY&libraries=places"
+    type="text/javascript"></script>
+
+    <script>
+         var map = new google.maps.Map(document.getElementById("map-canvas"), {
+                center: {
+                    lat:49.246292,lng:-123.116226
+                },
+                zoom: 15
+            });
+
+            var marker = new google.maps.Marker({
+                position: {
+                    lat:49.246292,lng:-123.116226
+                },
+                map:map,
+                draggable: true
+            });
+        
+        var searchBox = new google.maps.places.SearchBox(document.getElementById('mapsearch'));
+
+        google.maps.event.addDomListener(searchBox, 'places_changed', function() {
+                    var places = searchBox.getPlaces();
+                    var bounds = new google.maps.LatLngBounds();
+                    var i, place;
+
+                    for (i = 0; place = places[i]; i++) {
+                        bounds.extend(place.geometry.location);
+                        marker.setPosition(place.geometry.location);
+                    }
+                    map.fitBounds(bounds);
+                    map.setZoom(15);
+                })
+
+
+        </script>
+
+
+</div>
+</header>
+</body>
+</html>
